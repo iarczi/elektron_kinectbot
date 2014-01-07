@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/alatosze/ros_workspace/elektron_kinectbot/elektron_teleop/devel/setup.sh
