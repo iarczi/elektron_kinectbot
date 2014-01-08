@@ -15,7 +15,8 @@ class kinect_tf_broadcaster():
     def __init__(self):
         self.roll = rospy.get_param("~roll", 0.0)
         self.pitch = rospy.get_param("~pitch", 0.0)
-        
+        self.x = rospy.get_param("~x", -0.077")
+	self.z =  rospy.get_param("~z", 0.35)
         self.server = DynamicReconfigureServer(Params, self.reconfigure)
         
         #print "R: %f P: %f" % (roll, pitch)
@@ -32,7 +33,7 @@ class kinect_tf_broadcaster():
             tf.TransformBroadcaster().sendTransform( (0, 0, 0),     self.angle_1, stamp, "/openni_depth_optical_frame", "/openni_depth_frame")
             tf.TransformBroadcaster().sendTransform( (0, 0, 0),     self.angle_1, stamp, "/openni_rgb_optical_frame", "/openni_rgb_frame")
             tf.TransformBroadcaster().sendTransform( (0, 0, 0),     self.angle_2, stamp, "/kinect_rotated_base", "/kinect_base")
-            tf.TransformBroadcaster().sendTransform( (-0.077, 0, 0.35),  self.angle_0, stamp, "/kinect_base", "/base_link")
+            tf.TransformBroadcaster().sendTransform( (self.x, 0, self.z),  self.angle_0, stamp, "/kinect_base", "/base_link")
             rospy.sleep(0.2)
 
     # Create a callback function for the dynamic reconfigure server.
