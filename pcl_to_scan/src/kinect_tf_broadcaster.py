@@ -15,7 +15,7 @@ class kinect_tf_broadcaster():
     def __init__(self):
         self.roll = rospy.get_param("~roll", 0.0)
         self.pitch = rospy.get_param("~pitch", 0.0)
-        self.x = rospy.get_param("~x", -0.077")
+        self.x = rospy.get_param("~x", -0.077)
 	self.z =  rospy.get_param("~z", 0.35)
         self.server = DynamicReconfigureServer(Params, self.reconfigure)
         
