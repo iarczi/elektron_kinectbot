@@ -1,8 +1,13 @@
 TrajectoryPlannerROS:
-  max_vel_x: 0.30
+#  max_vel_x: 0.30
+  #min_vel_x: 0.10
+ # max_rotational_vel: 0.7
+ # min_in_place_rotational_vel: 0.1
+  max_vel_x: 0.50
   min_vel_x: 0.10
-  max_rotational_vel: 0.7
+  max_rotational_vel: 1.0
   min_in_place_rotational_vel: 0.1
+
 
   acc_lim_th: 3.0
   acc_lim_x: 0.7
@@ -21,6 +26,6 @@ TrajectoryPlannerROS:
   occdist_scale: 0.1
   
   vx_samples: 8
-  controller_frequency: 5
-
+#  controller_frequency: 5
+  controller_frequency: 100
   
