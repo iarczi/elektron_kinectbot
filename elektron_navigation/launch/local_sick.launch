@@ -5,7 +5,7 @@
 	<node name="map_server" pkg="map_server" type="map_server" args="$(find elektron_navigation)/maps/map_5cm.pgm 0.05"/>
 
 	<!--- Run AMCL -->
-	<iclude file="$(find elektron_navigation)/launch/amcl_diff.launch" />
+	<include file="$(find elektron_navigation)/launch/amcl_diff.launch" />
 	<!--- Run fake localization (use odom frame) -->
 	<!---<node name="fake_local" pkg="fake_localization" type="fake_localization">-->
 	<!---	<remap from="base_pose_ground_truth" to="/odom"/>-->
