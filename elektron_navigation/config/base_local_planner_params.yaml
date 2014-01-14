@@ -17,13 +17,13 @@ TrajectoryPlannerROS:
   sim_time: 4.0
   sim_granularity: 0.05
   
-  xy_goal_tolerance: 0.2
-  yaw_goal_tolerance: 0.1
-  latch_xy_goal_tolerance: true
+  xy_goal_tolerance: 0.05
+  #yaw_goal_tolerance: 0.1
+  #latch_xy_goal_tolerance: true
 
-  #path_distance_bias: 0.1
- # goal_distance_bias: 0.5
-  #occdist_scale: 0.1
+#	path_distance_bias: 0.1
+#	goal_distance_bias: 0.5
+#	occdist_scale: 0.1
   
   vx_samples: 8
 #  controller_frequency: 5
