@@ -1,0 +1,7 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~min_height" : \b [double] Lower bound min: -2.0, default: 0.05, max: 2.0
+- \b "~max_height" : \b [double] Upper bound min: -2.0, default: 0.5, max: 2.0
+

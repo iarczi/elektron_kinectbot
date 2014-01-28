@@ -2,18 +2,18 @@
 	<master auto="start"/>
 
 	<!-- Run the map server -->
-
-
-
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find elektron_navigation)/maps/test_map3.pgm 0.05"/>
-
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find elektron_navigation)/maps/map_5cm.pgm 0.05"/>
 
 	<!--- Run AMCL -->
+<<<<<<< HEAD
 	<include file="$(find elektron_navigation)/launch/amcl_diff.launch" />
+=======
+	<!-- <iclude file="$(find elektron_navigation)/launch/amcl_diff.launch" />-->
+>>>>>>> a27857d6e4d9c7041b12d807ab30ad612feacb19
 	<!--- Run fake localization (use odom frame) -->
-	<!---<node name="fake_local" pkg="fake_localization" type="fake_localization">-->
-	<!---	<remap from="base_pose_ground_truth" to="/odom"/>-->
-	<!---</node>-->
+	<node name="fake_local" pkg="fake_localization" type="fake_localization">
+		<remap from="base_pose_ground_truth" to="/odom"/>
+	</node>
 
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
 		<rosparam file="$(find elektron_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />

@@ -1,0 +1,8 @@
+\subsubsection usage Usage
+\verbatim
+<node name="cloud_to_scan" pkg="pcl_to_scan" type="cloud_to_scan">
+  <param name="min_height" type="double" value="0.05" />
+  <param name="max_height" type="double" value="0.5" />
+</node>
+\endverbatim
+
